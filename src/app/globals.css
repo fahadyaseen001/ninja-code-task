@@ -1,6 +1,6 @@
-/* Prime React Configurations */
-
-@import "primereact/resources/themes/lara-light-cyan/theme.css";
+/* PrimeReact Configurations */
+@import "primereact/resources/themes/saga-green/theme.css";
+@import 'primereact/resources/primereact.min.css';
 @import 'primeicons/primeicons.css';
         
 

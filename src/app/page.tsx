@@ -1,10 +1,15 @@
-import Image from "next/image";
+import { Main } from "./components/body";
+import Header from "./components/header";
+import { LocationProvider } from "./contexts/location-context";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div>
+       <LocationProvider>
+          <Header />
+          <Main/>
+       </LocationProvider>
     
-      <h1 className="text-4xl font-bold">Welcome to Ninja Code Task</h1>
     </div>
   );
 }
