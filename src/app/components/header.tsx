@@ -18,36 +18,29 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
   const { location } = useLocation();
 
-  // Memoize the location option to prevent unnecessary rerenders
   const locationOption = useMemo<LocationOption | null>(() => {
     return location ? { label: location, value: location } : null;
   }, [location]);
 
-  // Resize handling
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
     };
     
-    // Initial check
     handleResize();
-    
-    // Add event listener
     window.addEventListener('resize', handleResize);
     
-    // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  // Memoized location options array
   const locationOptions = useMemo(() => {
     return location ? [{ label: location, value: location }] : [];
   }, [location]);
 
   return (
-    <div className="bg-white shadow-sm w-full">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20 gap-4">
           {/* Logo Section - Flexible sizing */}
@@ -83,7 +76,7 @@ const Header = () => {
             />
           </div>
     
-          {/* Actions Section - Adjusted for mobile */}
+          {/* Actions Section */}
           <div className="flex items-center gap-2 flex-shrink-0">
             {/* Desktop Buttons */}
             <div className="hidden md:flex gap-3">
@@ -118,7 +111,7 @@ const Header = () => {
         </div>
       </div>
     
-      {/* Mobile Location Selector - Show below logo */}
+      {/* Mobile Location Selector */}
       <div className="md:hidden border-t mt-2 py-2">
         <div className="container mx-auto px-4 flex items-center">
           <i className="pi pi-map-marker mr-2 text-gray-500"></i>
@@ -141,7 +134,7 @@ const Header = () => {
         className="p-sidebar-sm w-[80vw]"
         style={{ backgroundColor: 'white' }}
       >
-        <div className="p-4">
+        <div className="p-2">
           <h2 className="text-xl font-bold mb-4 pb-2 border-b">Account</h2>
           <div className="flex flex-col space-y-3">
             <Button 

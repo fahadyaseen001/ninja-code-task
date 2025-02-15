@@ -1,68 +1,52 @@
 "use client"
 
-import React, { createContext, useState, useContext, useCallback } from "react";
-import { Coordinates } from "@/app/utils/types/type";
-import { fetchUserLocation } from "@/app/services/location-services";
+import { createContext, useContext, useState } from 'react';
+import { fetchUserLocation, LocationData } from '../services/location-services';
+import { Coordinates } from '../utils/types/type';
 
 interface LocationContextType {
-  location: string;
+  location: string | null;
   coordinates: Coordinates;
+  setCoordinates: (coords: Coordinates) => void;
   fetchLocation: () => Promise<void>;
-  isLoading: boolean;
-  error: Error | null;
 }
 
-// Create the context with a more specific type
-const LocationContext = createContext<LocationContextType | null>(null);
+const LocationContext = createContext<LocationContextType | undefined>(undefined);
 
-export const LocationProvider = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
-  const [location, setLocation] = useState("");
+export function LocationProvider({ children }: { children: React.ReactNode }) {
+  const [location, setLocation] = useState<string | null>(null);
   const [coordinates, setCoordinates] = useState<Coordinates>({
     latitude: null,
-    longitude: null,
+    longitude: null
   });
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<Error | null>(null);
 
-  const fetchLocation = useCallback(async () => {
-    setIsLoading(true);
-    setError(null);
-    
+  const fetchLocation = async () => {
     try {
-      const locationData = await fetchUserLocation();
+      const locationData: LocationData = await fetchUserLocation();
       setLocation(locationData.address);
       setCoordinates(locationData.coordinates);
-    } catch (err) {
-      setError(err instanceof Error ? err : new Error("An unknown error occurred"));
-    } finally {
-      setIsLoading(false);
+    } catch (error) {
+      console.error('Error fetching location:', error);
+      throw error;
     }
-  }, []);
+  };
 
   return (
-    <LocationContext.Provider 
-      value={{ 
-        location, 
-        coordinates, 
-        fetchLocation, 
-        isLoading, 
-        error 
-      }}
-    >
+    <LocationContext.Provider value={{ 
+      location, 
+      coordinates, 
+      setCoordinates,
+      fetchLocation 
+    }}>
       {children}
     </LocationContext.Provider>
   );
-};
+}
 
-// Custom hook to use the location context with proper type checking
-export const useLocation = (): LocationContextType => {
+export function useLocation() {
   const context = useContext(LocationContext);
-  if (!context) {
-    throw new Error("useLocation must be used within a LocationProvider");
+  if (context === undefined) {
+    throw new Error('useLocation must be used within a LocationProvider');
   }
   return context;
-};
+}
