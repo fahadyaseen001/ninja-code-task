@@ -10,10 +10,11 @@ import { MapComponent } from "@/app/utils/ui/map"
 import ContextLoader from "@/app/utils/ui/context-loader"
 import Footer from "@/app/components/footer"
 
+// Replace the global declaration with a proper interface
 declare global {
   interface Window {
-    google: any
-    initMap: () => void
+    google: typeof google;
+    initMap: () => void;
   }
 }
 

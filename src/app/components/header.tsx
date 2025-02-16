@@ -12,7 +12,7 @@ import { LocationOption } from '@/app/utils/types/interfaces';
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [, setIsMobile] = useState(false);
   const { location } = useLocation();
 
   const locationOption = useMemo<LocationOption | null>(() => {

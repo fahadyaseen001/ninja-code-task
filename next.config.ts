@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
 
   images: {
 
-    domains: ['http://localhost:3000'], // have to production domain here later 
+    domains: ['https://enatega-multivendor.up.railway.app/graphql'], // have to production domain here later 
     remotePatterns: [
       {
         protocol: 'https',

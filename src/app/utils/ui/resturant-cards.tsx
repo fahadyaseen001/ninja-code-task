@@ -4,6 +4,7 @@ import { Card } from "primereact/card"
 import { Button } from "primereact/button"
 import { Rating } from "primereact/rating"
 import { useState } from "react"
+import Image from "next/image"
 import { RestaurantCardProps } from "@/app/utils/types/interfaces"
 
 export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
@@ -12,12 +13,14 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
 
   const header = (
     <div className="relative w-full overflow-hidden">
-      <img
-        alt={restaurant.name}
-        src={restaurant.image || "/placeholder.svg"}
-        className="w-full h-[120px] xs:h-[150px] sm:h-[200px] md:h-[180px] lg:h-[200px] 
-                   object-cover rounded-t-lg transition-transform duration-300 hover:scale-105"
-      />
+      <Image
+      alt={restaurant.name}
+      src={restaurant.image || "/placeholder.svg"}
+      width={400}
+      height={200}
+      className="w-full h-[120px] xs:h-[150px] sm:h-[200px] md:h-[180px] lg:h-[200px] 
+             object-cover rounded-t-lg transition-transform duration-300 hover:scale-105"
+/>
       {/* Status Badge */}
       <div className={`absolute top-2 right-12 sm:right-14 px-2 py-0.5 sm:py-1 
                        rounded-full text-[10px] xs:text-xs font-medium 

@@ -63,25 +63,23 @@ export const MapComponent = ({ coordinates, onHoverChange }: MapComponentProps) 
   }, []);
 
   // Handle coordinate changes
-  useEffect(() => {
-    if (mapInstanceRef.current && coordinates.latitude && coordinates.longitude) {
-      setIsRepositioning(true);
-      
-      const newCenter = { 
-        lat: coordinates.latitude, 
-        lng: coordinates.longitude 
-      };
+useEffect(() => {
+  if (mapInstanceRef.current && coordinates.latitude && coordinates.longitude) {
+    setIsRepositioning(true);
+    
+    const newCenter = { 
+      lat: coordinates.latitude, 
+      lng: coordinates.longitude 
+    };
 
-      mapInstanceRef.current.panTo(newCenter);
-      
-      // Add a listener for the end of the pan animation
-      const listener = mapInstanceRef.current.addListener('idle', () => {
-        setIsRepositioning(false);
-        // Remove the listener after it fires
-        google.maps.event.removeListener(listener);
-      });
-    }
-  }, [coordinates]);
+    mapInstanceRef.current.panTo(newCenter);
+    
+    const listener = mapInstanceRef.current.addListener('idle', () => {
+      setIsRepositioning(false);
+      google.maps.event.removeListener(listener);
+    });
+  }
+}, [coordinates.latitude, coordinates.longitude]);
 
   return (
     <div className="relative w-full h-full">
