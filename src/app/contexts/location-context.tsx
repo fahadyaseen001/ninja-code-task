@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
 import { createContext, useContext, useState } from 'react';
-import { fetchUserLocation, LocationData } from '../services/location-services';
-import { Coordinates } from '../utils/types/type';
+import { fetchUserLocation } from '../services/location-services';
+import { Coordinates, LocationData } from '../utils/types/interfaces';
 
 interface LocationContextType {
   location: string | null;

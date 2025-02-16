@@ -1,11 +1,7 @@
-// locationService.ts
 import axios from "axios";
-import { Coordinates } from "../utils/types/type";
+import { LocationData } from "../utils/types/interfaces";
 
-export interface LocationData {
-  address: string;
-  coordinates: Coordinates;
-}
+
 
 export const fetchUserLocation = (): Promise<LocationData> => {
   return new Promise((resolve, reject) => {

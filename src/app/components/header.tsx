@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import React, { useState, useEffect, useMemo } from 'react';
 import { Button } from 'primereact/button';
@@ -7,11 +7,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Sidebar } from 'primereact/sidebar';
 import { useLocation } from '../contexts/location-context';
+import { LocationOption } from '../utils/types/interfaces';
 
-interface LocationOption {
-  label: string;
-  value: string;
-}
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
@@ -64,7 +61,7 @@ const Header = () => {
     
           {/* Location Dropdown - Hidden on mobile */}
           <div className="hidden md:flex items-center flex-grow max-w-[200px]">
-            <i className="pi pi-map-marker mr-2 text-gray-500"></i>
+            <i className={`pi pi-map-marker mr-2 ${location ? 'text-green-500' : 'text-gray-500'}`}></i>
             <Dropdown
               value={locationOption}
               placeholder={location || "Select Location"}
@@ -114,7 +111,7 @@ const Header = () => {
       {/* Mobile Location Selector */}
       <div className="md:hidden border-t mt-2 py-2">
         <div className="container mx-auto px-4 flex items-center">
-          <i className="pi pi-map-marker mr-2 text-gray-500"></i>
+          <i className={`pi pi-map-marker mr-2 ${location ? 'text-green-500' : 'text-gray-500'}`}></i>
           <Dropdown
             value={locationOption}
             placeholder={location || "Select Location"}

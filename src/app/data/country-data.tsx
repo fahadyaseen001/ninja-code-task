@@ -1,4 +1,4 @@
-import { CountryCoordinate } from "../utils/types/type";
+import { CountryCoordinate } from "../utils/types/interfaces";
 
 export const countryCoordinates: CountryCoordinate[] = [
     { name: 'Cyprus', code: 'cy', coordinates: { latitude: 35.1264, longitude: 33.4299 } },

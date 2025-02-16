@@ -1,13 +1,9 @@
-"use client";
+'use client'
 
 import { useEffect, useRef, useState } from "react";
-import { Coordinates } from "../types/type";
 import MapLoader from "./map-loader";
+import { MapComponentProps } from "../types/interfaces";
 
-interface MapComponentProps {
-  coordinates: Coordinates;
-  onHoverChange: (isHovering: boolean) => void;
-}
 
 export const MapComponent = ({ coordinates, onHoverChange }: MapComponentProps) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
