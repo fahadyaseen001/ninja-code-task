@@ -1,4 +1,5 @@
-# Ninja Code Task
+
+<div align="center"> <img src="ninjas_code_logo.jpg" alt="NinjasCode Logo" width="80" height="80"> <h1>Ninjas Code Task</h1> </div>
 
 This repository is my submission for the Full Stack Developer challenge at Ninjas Code. It demonstrates my implementation of scalable and responsive web designs, focusing on food delivery functionality.
 
