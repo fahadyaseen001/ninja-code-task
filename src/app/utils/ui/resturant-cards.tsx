@@ -4,7 +4,7 @@ import { Card } from "primereact/card"
 import { Button } from "primereact/button"
 import { Rating } from "primereact/rating"
 import { useState } from "react"
-import { RestaurantCardProps } from "../types/interfaces"
+import { RestaurantCardProps } from "@/app/utils/types/interfaces"
 
 export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
   const [favorite, setFavorite] = useState(false)
@@ -166,6 +166,7 @@ export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
 
   return (
     <Card
+      data-testid="restaurant-card"
       title={titleTemplate}
       header={header}
       footer={footer}

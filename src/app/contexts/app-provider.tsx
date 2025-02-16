@@ -1,8 +1,8 @@
 'use client'
 
 import { ApolloProvider } from '@apollo/client'
-import { LocationProvider } from './location-context'
-import { client } from '../data/apollo'
+import { LocationProvider } from '@/app/contexts/location-context'
+import { client } from '@/app/data/apollo'
 
 
 export function Providers({ children }: { children: React.ReactNode }) {

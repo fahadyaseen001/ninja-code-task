@@ -8,7 +8,6 @@ export default function Home() {
     <div className="pt-[88px] md:pt-[96px] bg-white">
               <Header />
               <Body />
-           
-  </div>
+              </div>
   );
 }

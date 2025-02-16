@@ -1,8 +1,8 @@
 'use client'
 
 import { useEffect, useRef, useState } from "react";
-import MapLoader from "./map-loader";
-import { MapComponentProps } from "../types/interfaces";
+import MapLoader from "@/app/utils/ui/map-loader";
+import { MapComponentProps } from "@/app/utils/types/interfaces";
 
 
 export const MapComponent = ({ coordinates, onHoverChange }: MapComponentProps) => {

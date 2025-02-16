@@ -1,5 +1,5 @@
 import axios from "axios";
-import { LocationData } from "../utils/types/interfaces";
+import { LocationData } from "@/app/utils/types/interfaces";
 
 
 

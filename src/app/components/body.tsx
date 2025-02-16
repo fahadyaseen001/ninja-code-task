@@ -3,12 +3,12 @@
 import { Button } from "primereact/button"
 import { InputText } from "primereact/inputtext"
 import { useEffect, useState } from "react"
-import { useLocation } from "../contexts/location-context"
+import { useLocation } from "@/app/contexts/location-context"
 import Script from "next/script"
 import { ScanSearch } from "lucide-react"
-import { MapComponent } from "../utils/ui/map"
-import ContextLoader from "../utils/ui/context-loader"
-import Footer from "./footer"
+import { MapComponent } from "@/app/utils/ui/map"
+import ContextLoader from "@/app/utils/ui/context-loader"
+import Footer from "@/app/components/footer"
 
 declare global {
   interface Window {
@@ -83,7 +83,8 @@ export const Body = () => {
             <div className="flex flex-col sm:flex-row items-center w-full bg-white rounded-md overflow-hidden shadow-lg">
               <div className="flex items-center flex-grow px-3 py-3">
                 <i className={`pi pi-map-marker ${location ? 'text-green-500' : 'text-gray-500'} mr-2`}></i>
-                <InputText
+                <InputText 
+                  data-testid="address-input"
                   value={address}
                   onChange={(e) => setAddress(e.target.value)}
                   placeholder="Enter Delivery Address"
@@ -93,6 +94,7 @@ export const Body = () => {
               </div>
 
               <Button
+                 data-testid="share-location-btn"
                 label="Share Location"
                 icon={<ScanSearch className="h-5 w-5 mr-2" />}
                 className="
@@ -111,6 +113,7 @@ export const Body = () => {
               />
 
               <Button
+                data-testid="find-restaurants-btn"
                 label="Find Restaurants"
                 className="
                   bg-green-500 

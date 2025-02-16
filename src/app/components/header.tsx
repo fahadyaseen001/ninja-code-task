@@ -6,8 +6,8 @@ import { Dropdown } from 'primereact/dropdown';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Sidebar } from 'primereact/sidebar';
-import { useLocation } from '../contexts/location-context';
-import { LocationOption } from '../utils/types/interfaces';
+import { useLocation } from '@/app/contexts/location-context';
+import { LocationOption } from '@/app/utils/types/interfaces';
 
 
 const Header = () => {
@@ -63,6 +63,7 @@ const Header = () => {
           <div className="hidden md:flex items-center flex-grow max-w-[200px]">
             <i className={`pi pi-map-marker mr-2 ${location ? 'text-green-500' : 'text-gray-500'}`}></i>
             <Dropdown
+              data-testid="header-location"
               value={locationOption}
               placeholder={location || "Select Location"}
               options={locationOptions}

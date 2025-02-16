@@ -3,13 +3,13 @@
 import { Card } from 'primereact/card'
 import { Button } from 'primereact/button'
 import 'flag-icons/css/flag-icons.min.css'
-import { useLocation } from '../contexts/location-context'
-import { countryCoordinates } from '../data/country-data'
+import { useLocation } from '@/app/contexts/location-context'
+import { countryCoordinates } from '@/app/data/country-data'
 import { useEffect } from 'react'
-import RestaurantCard from '../utils/ui/resturant-cards'
+import RestaurantCard from '@/app/utils/ui/resturant-cards'
 import { useLazyQuery } from '@apollo/client'
-import { RestaurantInterface } from '../utils/types/interfaces'
-import { restaurantList } from '../data/apollo/resturants-list-query'
+import { RestaurantInterface } from '@/app/utils/types/interfaces'
+import { restaurantList } from '@/app/data/apollo/resturants-list-query'
 
 export default function Footer({ showRestaurants = false }) {
   const { coordinates, setCoordinates } = useLocation();
@@ -42,14 +42,14 @@ export default function Footer({ showRestaurants = false }) {
         <>
           <h2 className="text-2xl font-bold mb-6 text-black">All Restaurants</h2>
           {loading ? (
-            <div className="text-gray-400 text-center">
+            <div data-testid="loader" className="text-gray-400 text-center">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-400 mx-auto mb-4"></div>
               <p>Loading Restaurants, please wait...</p>
             </div>
           ) : error ? (
             <p>Error loading restaurants: {error.message}</p>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div data-testid="restaurants-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {data?.nearByRestaurants?.restaurants.map((restaurant: RestaurantInterface) => (
                 <RestaurantCard
                   key={restaurant._id}

@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "cypress:open": "cypress open"
+    "lint": "next lint"
+    
   },
   "dependencies": {
     "@apollo/client": "^3.13.0",
