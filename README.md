@@ -23,7 +23,7 @@ The application allows users to browse nearby resturant & view their information
 
 -Intialized my task repo with NextJs 15 ( App Router ) & setup all the necassary libs ReactPrime,Apollo-Client & Cypress
 
--Divided the task into small parts of website ( Header,Body,Footer ) and intialized folder structure for project with proper coding naming & convention practises with
+-Divided the task into small parts of website ( Header,Body,Footer ) and intialized folder structure for project with proper coding naming & convention practises with absolute path imports 
 
 -Used NextJs App Router for project files & Navigation
 
