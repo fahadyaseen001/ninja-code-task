@@ -51,13 +51,7 @@ You can find the demo videos in the project-demo folder:
 ## Deployed Link
 You can access the live application at [Deployed Link](ninja-code-task.vercel.app).
 
-## Learn More
-To learn more about Next.js, take a look at the following resources:
+## Thank You
+Thank you for taking the time to review this project. I've put significant effort into creating a scalable and user-friendly application that meets all the requirements. I look forward to discussing the implementation details and hearing your valuable feedback.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-## Deploy on Vercel
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to reach out if you have any questions or need clarification about any aspect of the project.
