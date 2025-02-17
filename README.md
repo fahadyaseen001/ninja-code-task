@@ -1,4 +1,3 @@
-
 <div align="center"> <img src="ninjas_code_logo.jpg" alt="NinjasCode Logo" width="80" height="80"> <h1>Ninjas Code Task</h1> </div>
 
 This repository is my submission for the Full Stack Developer challenge at Ninjas Code. It demonstrates my implementation of scalable and responsive web designs, focusing on food delivery functionality.
@@ -45,7 +44,9 @@ You can find an example of the required environment variables in the `.env.examp
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Video Demo
-A video demo showcasing the features and functionality of this application can be found [here](link-to-your-video-demo).
+You can find the demo videos in the project-demo folder:
+- [Project Demo Video](./project-demo/project.mp4) - Main project features and functionality
+- [Test Cases Demo Video](./project-demo/test-cases-demo.mp4) - Demonstration of test cases
 
 ## Deployed Link
 You can access the live application at [Deployed Link](ninja-code-task.vercel.app).
