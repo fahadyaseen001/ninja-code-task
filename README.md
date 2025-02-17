@@ -11,6 +11,49 @@ The application allows users to browse nearby resturant & view their information
 - View restaurant details and menus
 - Responsive design for mobile and desktop
 
+## Thought Process For Understanding The Task & Coding It 💭
+
+-Started with understanding all the necassary requirements of the task assigned
+
+-Wrote those requirements on paper for more clarity
+
+-Understood the flow of task mechanism by exploring and playing around with real deployed website provided in the task
+
+-Reviewed the codebase of Enatega Multivendor Web Original Repo for further understanding & clarity on provided task.
+
+-Intialized my task repo with NextJs 15 ( App Router ) & setup all the necassary libs ReactPrime,Apollo-Client & Cypress
+
+-Divided the task into small parts of website ( Header,Body,Footer ) and intialized folder structure for project with proper coding naming & convention practises with
+
+-Used NextJs App Router for project files & Navigation
+
+-Utilized Context for State Management due to smaller scope of the task
+
+-Utilized OpenStreet Map for static map coordinates due to its non api key requirement & utilized Google Maps with its Api Key for implementing maps along with exploring map options as per use case
+
+-Add .env.local file for api key security & envoriment (local & production) implementation.
+
+-Using Graphql functionality to pass data to the client side using the api endpoint url
+
+-Used Apollo Client for quering resturant data inside resturant cards
+
+-Defining types/interfaces to ensure type safety on client side upon arrival of data using Graphql
+
+-Ensure Responsiveness across all devices layout (mobile,tablet & web)
+
+-Optimized the performance by handling all the edge cases and implementation loading state handling along with error handling 
+
+-Using Chrome Dev Tool to ensure both responsiveness & performance with low LCP,CLS & INP indexes value ensuring high performance 
+
+-Ensuring in App performance using react.Memo,useCallback hooks
+
+-Utilizing SSR for optimization in NextJs
+
+-At last wrote test cases - e2e for unit testing of the functionality (3 test cases passed ✅/ 2 test cases failed ❌ ) - Cause of failure due to api endpoint url not sending complete data & missing attributed inside resturant cards
+
+-This was the approach i took inorder to complete the task assigned.
+
+
 ## Getting Started 🙌
 
 ### Prerequisites
