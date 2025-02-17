@@ -3,13 +3,14 @@
 This repository is my submission for the Full Stack Developer challenge at Ninjas Code. It demonstrates my implementation of scalable and responsive web designs, focusing on food delivery functionality.
 
 ## Project Overview 🚀
-The application allows users to browse nearby resturant & view their information. It utilizes Google Maps & OpenStreet Map API for location services,Apollo Client for managing GraphQL data of resturants,tested on Cyprus(e2e with Unit Testing) & Deployed on Vercel.
+A NextJs application that allows users to browse nearby resturant & view their information. It utilizes Google Maps & OpenStreet Map API for location services,Apollo Client for managing GraphQL data of resturants,tested on Cyprus(e2e with Unit Testing) & Deployed on Vercel with Responsive UI using TailwindCSS & ReactPrime.
 
 ## Features 🤖
 - Location Fetching Features
 - Browse nearby restaurants & countries using Google Maps
 - View restaurant details and menus
-- Responsive design for mobile and desktop
+- Responsive design for mobile and desktop with ReactPrime & TailwindCSS
+- Typesafety using Typescript
 
 ## Thought Process For Understanding The Task & Coding It 💭
 
