@@ -2,7 +2,7 @@
 
 This repository is my submission for the Full Stack Developer challenge at Ninjas Code. It demonstrates my implementation of scalable and responsive web designs, focusing on food delivery functionality.
 
-## Project Overview 📍
+## Project Overview 
 The application allows users to browse nearby resturant & view their information. It utilizes Google Maps & OpenStreet Map API for location services,Apollo Client for managing GraphQL data of resturants,tested on Cyprus(e2e with Unit Testing) & Deployed on Vercel.
 
 ## Features 🤖
@@ -11,13 +11,13 @@ The application allows users to browse nearby resturant & view their information
 - View restaurant details and menus
 - Responsive design for mobile and desktop
 
-## Getting Started
+## Getting Started 🙌
 
 ### Prerequisites
 - Node.js (version 14 or later)
 - npm or yarn
 
-### Environment Variables 📁
+### Environment Variables 
 You can find an example of the required environment variables in the `.env.example` file. Make sure to create your own `.env` file based on this example.
 
 ### Installation 💻
@@ -43,7 +43,7 @@ You can find an example of the required environment variables in the `.env.examp
 
 4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. 🌐
 
-## Video Demo 📹
+## Video Demo 
 You can find the demo videos in the project-demo folder:
 - [Project Demo Video](./project-demo/project.mp4) - Main project features and functionality
 - [Test Cases Demo Video](./project-demo/test-cases-demo.mp4) - Demonstration of test cases
